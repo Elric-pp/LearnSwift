@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     var data = ["30 Days Swift", "你好世界", "学习Swift", "呵呵", "呵呵，再见🤗 See you next Project"]
     
     var fontNames = ["MFTongXin_Noncommercial-Regular", "MFJinHei_Noncommercial-Regular", "MFZhiHei_Noncommercial-Regular"]
@@ -25,8 +25,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
+        super.viewDidLoad()       
+     
         self.view.backgroundColor = UIColor.blackColor()
         
         fontTableView = UITableView()

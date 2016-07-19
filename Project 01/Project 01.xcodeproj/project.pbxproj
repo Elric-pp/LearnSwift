@@ -14,7 +14,7 @@
 		0512AB8C1D2F436F0031FC4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0512AB8A1D2F436F0031FC4F /* LaunchScreen.storyboard */; };
 		0512AB971D2F43700031FC4F /* Project_01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512AB961D2F43700031FC4F /* Project_01Tests.swift */; };
 		0512ABA21D2F43700031FC4F /* Project_01UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512ABA11D2F43700031FC4F /* Project_01UITests.swift */; };
-		0512ABB21D2F44410031FC4F /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0512ABB11D2F44410031FC4F /* SnapKit.framework */; };
+		05504E051D2FBD9E0096CF2B /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05504E031D2FBD9E0096CF2B /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +34,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		05504E071D2FBD9F0096CF2B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				05504E051D2FBD9E0096CF2B /* SnapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0512AB7E1D2F436F0031FC4F /* Project 01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project 01.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0512AB811D2F436F0031FC4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,18 +62,10 @@
 		0512AB9D1D2F43700031FC4F /* Project 01UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project 01UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0512ABA11D2F43700031FC4F /* Project_01UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_01UITests.swift; sourceTree = "<group>"; };
 		0512ABA31D2F43700031FC4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0512ABB11D2F44410031FC4F /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		05504E031D2FBD9E0096CF2B /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SnapKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0512AB7B1D2F436F0031FC4F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0512ABB21D2F44410031FC4F /* SnapKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0512AB8F1D2F43700031FC4F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -74,13 +80,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05504E061D2FBD9F0096CF2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		0512AB751D2F436F0031FC4F = {
 			isa = PBXGroup;
 			children = (
-				0512ABB11D2F44410031FC4F /* SnapKit.framework */,
+				05504E031D2FBD9E0096CF2B /* SnapKit.framework */,
 				0512AB801D2F436F0031FC4F /* Project 01 */,
 				0512AB951D2F43700031FC4F /* Project 01Tests */,
 				0512ABA01D2F43700031FC4F /* Project 01UITests */,
@@ -145,9 +158,10 @@
 			buildConfigurationList = 0512ABA61D2F43700031FC4F /* Build configuration list for PBXNativeTarget "Project 01" */;
 			buildPhases = (
 				0512AB7A1D2F436F0031FC4F /* Sources */,
-				0512AB7B1D2F436F0031FC4F /* Frameworks */,
 				0512AB7C1D2F436F0031FC4F /* Resources */,
 				0512ABB01D2F43E70031FC4F /* ShellScript */,
+				05504E061D2FBD9F0096CF2B /* Frameworks */,
+				05504E071D2FBD9F0096CF2B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -267,11 +281,11 @@
 /* Begin PBXShellScriptBuildPhase section */
 		0512ABB01D2F43E70031FC4F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/SnapKit.framework",
 			);
 			outputPaths = (
 			);
@@ -432,6 +446,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Project 01/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -447,6 +462,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Project 01/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -520,6 +536,7 @@
 				0512ABA81D2F43700031FC4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0512ABA91D2F43700031FC4F /* Build configuration list for PBXNativeTarget "Project 01Tests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +545,7 @@
 				0512ABAB1D2F43700031FC4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0512ABAC1D2F43700031FC4F /* Build configuration list for PBXNativeTarget "Project 01UITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +554,7 @@
 				0512ABAE1D2F43700031FC4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
